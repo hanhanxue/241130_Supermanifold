@@ -1,3 +1,36 @@
+.section {
+  /* background-color: #0a0a0a; */
+  color: #ededed;
+
+  background-color: #000000;
+  /* color: #b2b2b2; */
+
+  /* height: min(100svh, 80vw); */
+  height: 100svh !important;
+}
+
+.container {
+  height: 100%;
+  padding: 80px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+
+  align-items: center;
+  /* justify-items: center; */
+
+}
+
+.frame {
+  grid-column: 1 / 13;
+}
+
+
+
+
+
+
 .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
