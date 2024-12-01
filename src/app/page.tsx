@@ -1,6 +1,6 @@
 
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 
 
@@ -11,11 +11,10 @@ export default function Home() {
         <div className={`${styles.container}`}>
 
           <div className={`${styles.frame} title3` }>
+
             <p>Supermanifold</p>
-            <p>Intelligent products for cozy living*.</p>
+            <p>Intelligent products for cozy living<span className={`${styles.highlight}`}>*</span>.</p>
             <p>Designed and manufactured in Montréal, Canada.</p>
-
-
           </div>
 
 
