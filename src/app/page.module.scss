@@ -15,19 +15,22 @@
 
 .container {
   height: 100%;
-  padding: var(--s-24);
+  padding: var(--spacing-24);
 
-  @include respond(md) {
-    padding: var(--s-12);
+  @include respond(lg) {
+    padding: var(--spacing-16);
+  }
+  @include respond(sm) {
+    padding: var(--spacing-12);
   }
 //   @media (max-width: 768px) {
-//     padding: var(--s-12);
+//     padding: var(--spacing-12);
 // }
 
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: var(--s-2);
+  gap: var(--spacing-2);
 
   align-items: center;
   // justify-items: center;
@@ -40,6 +43,7 @@
   grid-column: 1 / 13;
 
   display: grid;
+  align-items: center;
   // justify-items: center;
 
   // height: 24px; /* Adjust as needed */
