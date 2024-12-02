@@ -1,4 +1,4 @@
-
+@use "sass:map";
 
 // A map of breakpoints
 $breakpoints: (
@@ -18,10 +18,10 @@ $breakpoints: (
 
 
 @mixin respond($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
+    @if map.has-key($breakpoints, $breakpoint) {
 
         // Get the breakpoint value
-        $breakpoint-value: map-get($breakpoints, $breakpoint);
+        $breakpoint-value: map.get($breakpoints, $breakpoint);
 
         @media (max-width: $breakpoint-value) {
             @content;

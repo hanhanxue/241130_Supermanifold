@@ -1,0 +1,73 @@
+
+@use "@/styles/abstracts/respond" as *;
+@use "@/styles/utilities/animations" as *;
+
+
+.section {
+  /* background-color: #0a0a0a; */
+  color: #ededed;
+
+  background-color: #000000;
+  /* color: #b2b2b2; */
+
+  /* height: min(100svh, 80vw); */
+  height: 100svh !important;
+}
+
+.container {
+  height: 100%;
+  padding: var(--spacing-24);
+
+
+//   @media (max-width: 768px) {
+//     padding: var(--spacing-12);
+// }
+
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--spacing-2);
+
+  align-items: center;
+  // justify-items: center;
+  @include respond(lg) {
+    padding: var(--spacing-16);
+  }
+  @include respond(sm) {
+    padding: var(--spacing-12);
+  }
+
+
+}
+
+.frame {
+  grid-column: 1 / 13;
+
+  display: grid;
+  align-items: center;
+  // justify-items: center;
+
+  // height: 24px; /* Adjust as needed */
+  // background-color: red;
+  // position: relative;
+  // overflow: hidden;
+
+  @include respond(sm) {
+    text-align: center;
+      }
+
+      p {
+        opacity: 0;
+        transform: translateY(12px);
+
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+}
+
+.highlight  {
+  color: rgba(255, 255, 255, .6);
+}
+
+
