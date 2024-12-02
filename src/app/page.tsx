@@ -1,7 +1,6 @@
 
 
 
-import Cover from "@/layout/Cover";
 import Cover_A from "@/layout/Cover_A";
 
 
