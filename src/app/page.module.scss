@@ -1,4 +1,4 @@
-
+@use "@/styles/abstracts/respond" as *;
 @use "@/styles/utilities/animations" as *;
 
 
@@ -15,14 +15,24 @@
 
 .container {
   height: 100%;
-  padding: 80px;
+  padding: var(--s-24);
+
+  @include respond(md) {
+    padding: var(--s-12);
+  }
+//   @media (max-width: 768px) {
+//     padding: var(--s-12);
+// }
+
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  gap: var(--s-2);
 
   align-items: center;
-  /* justify-items: center; */
+  // justify-items: center;
+
+
 
 }
 
@@ -30,13 +40,20 @@
   grid-column: 1 / 13;
 
   display: grid;
+  // justify-items: center;
 
   // height: 24px; /* Adjust as needed */
   // background-color: red;
   // position: relative;
   // overflow: hidden;
 
+  @include respond(sm) {
+    text-align: center;
+      }
+
   p {
+
+
     animation: fadeIn 12s ease-in-out infinite;
     opacity: 0;
     // position: absolute;

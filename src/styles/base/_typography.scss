@@ -1,17 +1,44 @@
 
-
-@font-face {
-    font-family: "Sans";
-    src: url("/fonts/MonumentGrotesk/ABCMonumentGrotesk-Regular-Trial.woff2") format("woff2");
-  }
+@use "@/styles/abstracts/functions" as *;
+@use "@/styles/abstracts/respond" as *;
 
 
 .title3 {
 
     font-family: "Sans";
 
-    font-size: 21px;
-    line-height: 24px;
+    font-size: rem(21);
+    line-height: rem(24);
+
+    @include respond(md) {
+      font-size: rem(18);
+      line-height: rem(22);
+    }
 
 }
 
+
+
+
+
+@font-face {
+  font-family: "Sans";
+  src: url("/fonts/MonumentGrotesk/ABCMonumentGrotesk-Regular-Trial.woff2") format("woff2");
+}
+
+
+
+
+// 100 Thin (Hairline)
+// 200 Extra Light (Ultra Light)
+// 300 Light
+
+// 400 Normal (Regular)
+
+// 500 Medium
+// 600 Semi Bold (Demi Bold)
+// 700 Bold
+
+// 800 Extra Bold (Ultra Bold)
+// 900 Black (Heavy)
+// 950 Extra Black (Ultra Black)

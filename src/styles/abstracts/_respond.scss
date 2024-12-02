@@ -1,0 +1,33 @@
+
+
+// A map of breakpoints
+$breakpoints: (
+    2xl: 1536px,
+
+    xl: 1280px, // DESKTOPS
+    lg: 1024px,  // LAPTOPS
+
+
+    md: 768px,  // LANDSCAPE TABLETS
+
+    
+    sm: 640px,  // LARGE PHONES & PORTRAIT TABLETS
+    xs: 512px,  // PHONES
+);
+
+
+
+@mixin respond($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @media (max-width: $breakpoint-value) {
+            @content;
+        }
+    } @else {
+      @error "No match found for breakpoint: #{$breakpoint}.";
+    }
+  }
+  
