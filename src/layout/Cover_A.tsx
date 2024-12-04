@@ -12,38 +12,38 @@ export default function Cover_A() {
     const timeline = gsap.timeline({ repeat: -1 }) // infinite loop
 
     paragraphsRef.current.forEach((p, i) => {
-        if(p) {
+      if (p) {
+        timeline.to(
+          p,
+          {
+            y: 0,
+            duration: 1.33,
+            ease: "Power2.inOut",
+          },
+          i * 4
+        )
 
-            timeline
-            .to(
-                p,
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration:1.33,
-                    ease: 'Power2.inOut',
-                },
-                i * 4
-            )
-            .to(
-                p,
-                {
-                    opacity: 1,
-                    duration:1.33,
-                },
-                i * 4 + 1.33
-            )
-            .to(
-                p,
-                {
-                    opacity: 0,
-                    // y: -20,
-                    duration:1.33,
-                    ease: 'Power2.inOut',
-                },
-                i * 4 + 2.66
-            )
-        }
+        // Opacity animation with ease: 'linear'
+        timeline
+          .to(
+            p,
+            {
+              opacity: 1,
+              duration: 1.33,
+              ease: "none",
+            },
+            i * 4 // Same start time as the translate animation
+          )
+          .to(
+            p,
+            {
+              opacity: 0,
+              duration: 1.33,
+              ease: "Power2.inOut",
+            },
+            i * 4 + 2.66
+          )
+      }
     })
   }, [])
 
@@ -51,14 +51,59 @@ export default function Cover_A() {
     <section className={`${styles.section} xsection`}>
       <div className={`${styles.container}`}>
         <div className={`${styles.frame} title3`}>
-          <p ref={(el) => { paragraphsRef.current[0] = el! }}>Supermanifold</p>
-          <p ref={(el) => { paragraphsRef.current[1] = el! }}>
+          <p
+            ref={(el) => {
+              paragraphsRef.current[0] = el!
+            }}
+          >
+            Supermanifold
+          </p>
+          <p
+            ref={(el) => {
+              paragraphsRef.current[1] = el!
+            }}
+          >
             Intelligent products for cozy living
             <span className={`${styles.highlight}`}>*</span>.
-          </p >
-          <p ref={(el) => { paragraphsRef.current[2] = el! }}>Designed and manufactured in Montréal, Canada.</p>
+          </p>
+          <p
+            ref={(el) => {
+              paragraphsRef.current[2] = el!
+            }}
+          >
+            Designed and manufactured in Montréal, Canada.
+          </p>
         </div>
       </div>
     </section>
   )
 }
+
+// .to(
+//   p,
+//   {
+//       opacity: 1,
+//       y: 0,
+//       duration:1.33,
+//       ease: 'Power2.inOut',
+//   },
+//   i * 4
+// )
+// // .to(
+// //     p,
+// //     {
+// //         opacity: 1,
+// //         duration:1.33,
+// //     },
+// //     i * 4 + 1.33
+// // )
+// .to(
+//   p,
+//   {
+//       opacity: 0,
+//       // y: -20,
+//       duration:1.33,
+//       ease: 'Power2.inOut',
+//   },
+//   i * 4 + 2.66
+// )
