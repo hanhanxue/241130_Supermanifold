@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-  <PlausibleProvider domain="supermanifold.com" customDomain="plausible.hanhanxueb.synology.me" />
+  <PlausibleProvider domain="supermanifold.com" customDomain="https://plausible.hanhanxueb.synology.me" />
 </head>
       <body className={``}>
         {children}
