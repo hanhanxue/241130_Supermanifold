@@ -1,6 +1,7 @@
 import "@/styles/main.scss"
 
 import type { Metadata } from "next";
+import PlausibleProvider from 'next-plausible'
 
 export const metadata: Metadata = {
   title: "supermanifold",
@@ -47,6 +48,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+  <PlausibleProvider domain="https://www.supermanifold.com/" />
+</head>
       <body className={``}>
         {children}
       </body>
