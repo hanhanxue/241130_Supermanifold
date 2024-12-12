@@ -63,8 +63,8 @@ export default function Cover_A() {
               paragraphsRef.current[1] = el!
             }}
           >
-            Intelligent products for cozy living
-            <span className={`${styles.highlight}`}>*</span>.
+            Essential products for cozy living.
+            {/* <span className={`${styles.highlight}`}>*</span>. */}
           </p>
           <p
             ref={(el) => {

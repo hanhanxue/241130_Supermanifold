@@ -5,10 +5,10 @@ import PlausibleProvider from 'next-plausible'
 
 export const metadata: Metadata = {
   title: "supermanifold",
-  description: "Intelligent products for cozy living.",
+  description: "Essential products for cozy living.",
   openGraph: {
     title: 'supermanifold',
-    description: 'Intelligent products for cozy living.',
+    description: 'Essential products for cozy living.',
     url: 'https://www.supermanifold.com/',
     siteName: 'supermanifold',
     // images: [
